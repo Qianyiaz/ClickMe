@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+	<UseWPF>true</UseWPF>
+	<OutputType>WinExe</OutputType>
+	<LangVersion>10.0</LangVersion>
+	<TargetFramework>net48</TargetFramework>
+	<Authors>Copyright © Qusay Diaz 2025</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<!--Reference-->
+	
+	<!--Others-->
+	<Folder Include="Properties\" /> 
+    <ApplicationDefinition Include="Properties\App.xaml" />
+  </ItemGroup>
+
+</Project>
