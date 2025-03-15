@@ -5,7 +5,7 @@
 	<OutputType>WinExe</OutputType>
 	<LangVersion>10.0</LangVersion>
 	<TargetFramework>net48</TargetFramework>
-	<Authors>Copyright © Qusay Diaz 2025</Authors>
+	<Copyright>Copyright © Qusay Diaz 2025</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
