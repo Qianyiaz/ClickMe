@@ -59,16 +59,5 @@ namespace ClickMe
                 }
             }
         }
-
-        private void Border_Mouse(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            Border.Background = System.Windows.Media.Brushes.Gray;
-            DragMove();
-        }
-
-        private void Border_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
-        {
-            Border.Background = System.Windows.Media.Brushes.LightGray;
-        }
     }
 }

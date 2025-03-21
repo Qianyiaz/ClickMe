@@ -1,18 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-	<UseWPF>true</UseWPF>
-	<OutputType>WinExe</OutputType>
-	<LangVersion>10.0</LangVersion>
-	<TargetFramework>net48</TargetFramework>
-	<Copyright>Copyright © Qusay Diaz 2025</Copyright>
+    <UseWPF>true</UseWPF>
+    <LangVersion>9</LangVersion>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-	<!--Reference-->
-	
-	<!--Others-->
-	<Folder Include="Properties\" /> 
     <ApplicationDefinition Include="Properties\App.xaml" />
   </ItemGroup>
 
