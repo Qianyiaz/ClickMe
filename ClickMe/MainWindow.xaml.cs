@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace ClickMe
 {
@@ -10,7 +9,7 @@ namespace ClickMe
     /// </summary>
     public partial class MainWindow : Window
     {
-        int i = 0;
+        private int _i = 0;
 
         public MainWindow()
         {
@@ -19,8 +18,8 @@ namespace ClickMe
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            i++;
-            switch (i)
+            _i++;
+            switch (_i)
             {
                 case 1:
                 {
@@ -55,6 +54,11 @@ namespace ClickMe
                         new ProcessStartInfo("https://www.bilibili.com/video/BV1GJ411x7h7")
                     );
                     Close();
+                    break;
+                }
+                default:
+                {
+                    Button.Content = "别点了！！！😫";
                     break;
                 }
             }
