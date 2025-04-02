@@ -21,6 +21,7 @@
                                                   VerticalAlignment="Center" />
                             </Border>
                         </StackPanel>
+
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="Border" Property="Background" Value="Gray" />

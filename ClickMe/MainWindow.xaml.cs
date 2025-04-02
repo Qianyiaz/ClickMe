@@ -4,12 +4,13 @@ using System.Windows;
 
 namespace ClickMe
 {
-    /// <summary>
-    /// MainWindow.xaml 的交互逻辑
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class App
     {
-        private int _i = 0;
+    }
+
+    public partial class MainWindow
+    {
+        private int _i;
 
         public MainWindow()
         {

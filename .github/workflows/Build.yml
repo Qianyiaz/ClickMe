@@ -2,13 +2,17 @@ name: .NET Framework Desktop
 
 on:
   push:
+    
     paths:
       - "ClickMe/**"
       - ".github/workflows/Build.yml"
+  
   pull_request:
+    
     paths:
       - "ClickMe/**"
       - ".github/workflows/Build.yml"
+  
   workflow_dispatch:
 
 jobs:
@@ -22,29 +26,30 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Name_Project: ClickMe
-      Test_Project_Path: ClickMe/ClickMe.csproj 
-      
+      Debug_File_Name: ClickMe
+      Test_Project_Path: ClickMe/ClickMe.csproj
+    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v2.0.0
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Install NuGet
-      uses: NuGet/setup-nuget@v1
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v2.0.0
 
-    - name: Restore NuGet packages
-      run: nuget restore ${{ env.Test_Project_Path }}
+      - name: Install NuGet
+        uses: NuGet/setup-nuget@v1
 
-    - name: Build the project
-      run: msbuild ${{ env.Test_Project_Path }} /p:Configuration=${{ matrix.configuration }}
+      - name: Restore NuGet packages
+        run: nuget restore ${{ env.Test_Project_Path }}
 
-    - name: Upload a Build Artifact to GitHub
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ matrix.configuration }}-Windows
-        path: ClickMe/bin/${{ matrix.configuration }}/net48/${{ env.Name_Project }}.exe
+      - name: Build the project
+        run: msbuild ${{ env.Test_Project_Path }} /p:Configuration=${{ matrix.configuration }}
+
+      - name: Upload a Build Artifact to GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.configuration }}
+          path: ClickMe/bin/${{ matrix.configuration }}/net48/${{ env.Debug_File_Name }}.exe

@@ -7,8 +7,4 @@
         <TargetFramework>net48</TargetFramework>
     </PropertyGroup>
 
-    <ItemGroup>
-        <ApplicationDefinition Include="Properties\App.xaml"/>
-    </ItemGroup>
-
 </Project>
