@@ -2,9 +2,14 @@
 
     <PropertyGroup>
         <UseWPF>true</UseWPF>
-        <LangVersion>9</LangVersion>
+        <LangVersion>Latest</LangVersion>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net48</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Emoji.Wpf" Version="0.3.4" />
+        <PackageReference Include="Costura.Fody" Version="6.0.0"/>
+    </ItemGroup>
 
 </Project>
